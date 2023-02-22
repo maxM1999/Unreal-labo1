@@ -89,6 +89,7 @@ void ASwatGuyController::GamepadLookHorizontal(float InValue)
 
 void ASwatGuyController::Crouch()
 {
+    if(bIsDancing) return;
 	ACharacter* ControlledCharacter = Cast<ACharacter>(GetPawn());
 	if (!ControlledCharacter) return;
 
